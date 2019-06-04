@@ -1,0 +1,39 @@
+<div class="outer" [class.flex-shirink-compare]="currentModel=='flex-shrink'">
+	<div>11111</div>
+	<div>22222</div>
+	<div>33333</div>
+	<div class="flag1">44444</div>
+	<div>55555</div>
+	<div class="flag2">66666</div>
+	<div>77777</div>
+	<div>88888</div>
+</div>
+
+<div class="outer" [ngClass]="currentModel">
+	<div>11111</div>
+	<div>22222</div>
+	<div>33333</div>
+	<div class="flag1 test1">44444</div>
+	<div>55555</div>
+	<div class="flag2 test2">66666</div>
+	<div>77777</div>
+	<div>88888</div>
+</div>
+
+<div>
+
+	<ng-container *ngFor="let c of ['null','order','flex-grow','flex-shrink','align-self'],
+  let index">
+		<input type="radio" name="xxx" id="{{index}}" [value]="c" [(ngModel)]="currentModel">
+    <label for="{{index}}">{{c}}</label>
+  </ng-container>
+
+</div>
+
+<hr>
+
+<ul>
+	<li>flex-shrink需要和flex-basis一起使用</li>
+  <li>flex-grow默认为0，不膨胀</li>
+  <li>flex-shrink默认为1，会压缩</li>
+</ul>

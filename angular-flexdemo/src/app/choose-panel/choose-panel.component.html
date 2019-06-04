@@ -1,0 +1,8 @@
+  <h3>{{title}}</h3>
+	<div>
+		<ng-container *ngFor="let f of values;let index">
+			<input type="radio" [(ngModel)]="currentValue" [value]="f"
+      [name]="title"  id="{{title}}-{{index}}">
+      <label for="{{title}}-{{index}}">{{f}}</label>
+    </ng-container>
+  </div>

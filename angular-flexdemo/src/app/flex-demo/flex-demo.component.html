@@ -1,0 +1,35 @@
+<div class="outer" [ngStyle]="flexContainer">
+
+	<div>00000</div>
+	<div>11111</div>
+	<div>22222</div>
+	<div>33333</div>
+	<div>44444</div>
+	<div>55555</div>
+	<div>66666</div>
+	<div>77777</div>
+	<div>88888</div>
+	<div>99999</div>
+	<div>AAAAA</div>
+	<div>BBBBB</div>
+	<div>CCCCC</div>
+</div>
+
+<hr>
+
+<div>
+	<input type="button" value="容器的属性" (click)="showflexContainer=!showflexContainer">
+  
+  <div [hidden]="!showflexContainer">
+
+	<app-choose-panel title="flex-direction" [values]="flexDirectionValus" [(ngModel)]="flexDirection"></app-choose-panel>
+	<app-choose-panel title="flex-warp" [values]="flexWrapValues" [(ngModel)]="flexWrap"></app-choose-panel>
+	<app-choose-panel title="justify-content" [values]="justifyContentValues" [(ngModel)]="justifyContent"></app-choose-panel>
+	<app-choose-panel title="align-items" [values]="alignItemsValues" [(ngModel)]="alignItems"></app-choose-panel>
+	<app-choose-panel title="align-content" [values]="alignContentValues" [(ngModel)]="alignContent"></app-choose-panel>
+
+  </div>
+  
+</div>
+
+
